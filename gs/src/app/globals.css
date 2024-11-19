@@ -278,3 +278,9 @@ font-family: var(--fonte-principal);
 .button_login:hover::before {
   @apply top-0;
 }
+
+/* Cadastro */
+
+.campos_obrigatorios {
+  @apply ml-[1%] mt-[1%] text-[#1ABC9C];
+}
