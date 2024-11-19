@@ -153,22 +153,6 @@ footer > p {
   font-family: var(--fonte-principal);
 }
 
-/*Página de Erro*/
-
-.container_erro {
-@apply my-[10%] flex flex-col items-center justify-center gap-[10px];
-}
-
-.container_erro > h1 {
-@apply text-white text-[1.5rem];
-font-family: var(--fonte-principal);
-}
-
-.container_erro > h2 {
-@apply text-white text-[1.5rem];
-font-family: var(--fonte-principal);
-}
-
 /* Sugestões */
 
 .container_sugestoes {
@@ -481,3 +465,819 @@ tbody tr:nth-child(odd) {
 .icones_redes:hover {
   @apply scale-[1.1];
 }
+
+/*Página de Erro*/
+
+.container_erro {
+@apply my-[10%] flex flex-col items-center justify-center gap-[10px];
+}
+
+.container_erro > h1 {
+@apply text-white text-[1.5rem];
+font-family: var(--fonte-principal);
+}
+
+.container_erro > h2 {
+@apply text-white text-[1.5rem];
+font-family: var(--fonte-principal);
+}
+
+/* Responsividade */
+
+@media (max-width: 1800px) {
+  header > div {
+    @apply ml-[25vw];
+  }
+
+  .icone_conta {
+    @apply w-[3vw] ml-[35vw];
+  }
+}
+
+@media (max-width: 1750px) {
+  .icone_conta {
+    @apply ml-[34vw];
+  }
+}
+
+@media (max-width: 1700px) {
+  .icone_conta {
+    @apply ml-[33vw];
+  }
+}
+
+@media (max-width: 1650px) {
+  .icone_conta {
+    @apply ml-[31vw];
+  }
+}
+
+@media (max-width: 1630px) {
+  .button_cadastro {
+    @apply w-[10vw];
+  }
+}
+
+@media (max-width: 1580px) {
+  .icone_conta {
+    @apply ml-[29vw];
+  }
+
+  .icones_dados_consumo {
+    @apply w-[6vw] h-[10vh];
+  }
+}
+
+@media (max-width: 1500px) {
+  .icone_conta {
+    @apply w-[4vw] ml-[26vw];
+  }
+}
+
+@media (max-width: 1459px) {
+  .parte1_home > h1 {
+    @apply text-[2.2rem];
+  }
+
+  .parte1_home > p {
+    @apply text-[1.1rem] pt-[30px];
+  }
+
+  .parte2_home > div > h1 {
+    @apply text-[2rem];
+  }
+
+  .parte2_home > div > p {
+    @apply text-[1.1rem] pt-[20px];
+  }
+
+  .form_dados_consumo > .div_form_dados_consumo > input {
+    @apply w-[20vw];
+  }
+
+  .form_dados_consumo > .div_form_dados_consumo > select {
+    @apply w-[20vw];
+  }
+
+  table {
+    @apply w-[80vw];
+  }
+}
+
+@media (max-width: 1440px) {
+  .icone_conta {
+    @apply ml-[24vw];
+  }
+}
+
+@media (max-width: 1370px) {
+  header > div {
+    @apply ml-[22vw];
+  }
+
+  .icone_conta {
+    @apply ml-[24vw];
+  }
+}
+
+@media (max-width: 1300px) {
+  .parte1_home > h1 {
+    @apply text-[2.2rem];
+  }
+
+  .parte1_home > p {
+    @apply text-[1.1rem] pt-[30px];
+  }
+
+  .parte2_home > div > h1 {
+    @apply text-[1.8rem];
+  }
+
+  .parte2_home > div > p {
+    @apply text-[1.1rem] pt-[20px];
+  }
+
+  table {
+    @apply w-[90vw];
+  }
+
+  .botao_consumo {
+    @apply w-[12vw];
+  }
+
+  .icones_dados_consumo {
+    @apply w-[8vw] h-[12vh];
+  }
+}
+
+@media (max-width: 1290px) {
+  .icone_conta {
+    @apply ml-[22vw];
+  }
+}
+
+@media (max-width: 1230px) {
+  .icone_conta {
+    @apply ml-[20vw];
+  }
+
+  .imagem_integrante {
+    @apply w-[20vw];
+  }
+}
+
+@media (max-width: 1190px) {
+  header > h1 {
+    @apply ml-[10px];
+  }
+
+  header > div {
+    @apply ml-[19vw];
+  }
+
+  .icone_conta {
+    @apply ml-[23vw];
+  }
+
+  .parte1_home {
+    @apply pl-[10px];
+  }
+
+  .parte2_home {
+    @apply pl-[10px];
+  }
+
+  .container_sugestoes {
+    @apply pl-[10px];
+  }
+
+  .container_sobre {
+    @apply pl-[10px];
+  }
+
+  .container_dados_consumo {
+    @apply pl-[10px];
+  }
+
+  .icones_dados_consumo {
+    @apply w-[7vw] h-[10vh];
+  }
+
+  .texto_dados_consumo {
+    @apply mt-0;
+  }
+}
+
+@media (max-width: 1170px) {
+  .parte2_home {
+    @apply pt-[30%] pb-[30%];
+  }
+}
+
+@media (max-width: 1160px) {
+  .icone_conta {
+    @apply ml-[21vw];
+  }
+
+  .div_texto_login {
+    @apply text-base;
+  }
+}
+
+@media (max-width: 1140px) {
+  .button_cadastro {
+    @apply w-[12vw];
+  }
+}
+
+@media (max-width: 1110px) {
+  .icone_conta {
+    @apply ml-[19vw];
+  }
+}
+
+@media (max-width: 1070px) {
+  header > div {
+    @apply ml-[13vw];
+  }
+
+  .icone_conta {
+    @apply ml-[21vw];
+  }
+
+  .parte2_home {
+    @apply pt-[40%] pb-[20%];
+  }
+}
+
+@media (max-width: 1050px) {
+  .imagem_sugestao {
+    @apply w-[28vw];
+  }
+
+  .conjunto_sugestoes {
+    @apply gap-[5%];
+  }
+
+  .container_login {
+    @apply w-[70vw];
+  }
+
+  .container_conta {
+    @apply w-[80vw];
+  }
+
+  .botoes_conta {
+    @apply w-[12vw];
+  }
+
+  .icones_dados_consumo {
+    @apply w-[8vw] h-[10vh];
+  }
+
+  .form_dados_consumo > .div_form_dados_consumo > input {
+    @apply w-[30vw];
+  }
+
+  .form_dados_consumo > .div_form_dados_consumo > select {
+    @apply w-[30vw];
+  }
+
+  table {
+    @apply text-[0.9rem];
+  }
+
+  .icone_lixo {
+    @apply w-[3vw];
+  }
+}
+
+@media (max-width: 1010px) {
+  header > h1 {
+    @apply text-[1.7rem];
+  }
+
+  .ul_links {
+    @apply text-[0.9rem];
+  }
+
+  .icone_conta {
+    @apply ml-[24vw];
+  }
+
+  .imagem_integrante {
+    @apply w-[30vw];
+  }
+
+  .icones_redes {
+    @apply w-[6vw];
+  }
+}
+
+@media (max-width: 970px) {
+  .texto_input_form > input {
+    @apply w-[40vw];
+  }
+
+  .button_login {
+    @apply w-[12vw];
+  }
+
+  .button_cadastro {
+    @apply w-[15vw];
+  }
+}
+
+@media (max-width: 950px) {
+  .icone_conta {
+    @apply ml-[22vw];
+  }
+
+  footer > p {
+    @apply text-[0.7rem];
+  }
+}
+
+@media (max-width: 910px) {
+  .icone_conta {
+    @apply ml-[19vw];
+  }
+
+  .parte1_home > h1 {
+    @apply text-[2rem];
+  }
+
+  .parte1_home > p {
+    @apply text-[1rem] pt-[30px];
+  }
+
+  .parte2_home > div > h1 {
+    @apply text-[1.7rem];
+  }
+
+  .parte2_home > div > p {
+    @apply text-[1rem] pt-[20px];
+  }
+}
+
+@media (max-width: 890px) {
+  .container_sugestoes > h1 {
+    @apply text-[1.5rem];
+  }
+
+  .container_sugestoes > p {
+    @apply text-[0.9rem] w-[80vw];
+  }
+
+  .imagem_sugestao {
+    @apply w-[29vw];
+  }
+
+  .conjunto_sugestoes {
+    @apply gap-[3%];
+  }
+
+  .icones_dados_consumo {
+    @apply w-[9vw] h-[10vh];
+  }
+}
+
+@media (max-width: 870px) {
+  header {
+    @apply block;
+  }
+
+  header > h1 {
+    @apply text-[2.5rem] text-center mt-[10px];
+  }
+
+  header > div {
+    @apply flex justify-between mx-[2vw] mt-[10px];
+  }
+
+  .ul_links {
+    @apply text-[1rem];
+  }
+
+  .icone_conta {
+    @apply w-[5vw] ml-0;
+  }
+
+  .container_sugestoes > p {
+    @apply w-[90vw];
+  }
+
+  .conjunto_sugestoes {
+    @apply flex flex-col justify-center items-center;
+  }
+
+  .imagem_sugestao {
+    @apply w-[40vw];
+  }
+
+  .conjunto_sugestoes > div {
+    @apply w-[40vw] mb-[3%];
+  }
+
+  .conjunto_sugestoes > div > p {
+    @apply w-[40vw];
+  }
+}
+
+@media (max-width: 840px) {
+  .parte1_home > h1 {
+    @apply text-[1.9rem];
+  }
+
+  .parte2_home > div > h1 {
+    @apply text-[1.6rem];
+  }
+
+  .parte2_home > div > p {
+    @apply pt-[5px];
+  }
+
+  .container_login {
+    @apply w-[80vw];
+  }
+
+  .container_conta {
+    @apply w-[90vw];
+  }
+
+  .botoes_conta {
+    @apply w-[15vw];
+  }
+
+  .container_conta > ul {
+    @apply text-[1.2rem];
+  }
+}
+
+@media (max-width: 770px) {
+  .parte2_home > div > h1 {
+    @apply text-[1.5rem];
+  }
+
+  .parte2_home > div > p {
+    @apply pt-[1px];
+  }
+
+  .button_cadastro {
+    @apply w-[17vw];
+  }
+
+  .icones_dados_consumo {
+    @apply w-[11vw] h-[10vh];
+  }
+
+  .div_dados_consumo {
+    @apply mt-[5%];
+  }
+
+  .icone_lixo {
+    @apply w-[4vw];
+  }
+
+  .form_dados_consumo > .div_form_dados_consumo > input {
+    @apply w-[40vw];
+  }
+
+  .form_dados_consumo > .div_form_dados_consumo > select {
+    @apply w-[40vw];
+  }
+}
+
+@media (max-width: 730px) {
+  .parte2_home > div {
+    @apply top-[5%];
+  }
+}
+
+@media (max-width: 720px) {
+  .ul_links {
+    @apply text-[0.9rem];
+  }
+
+  .icone_conta {
+    @apply w-[7vw];
+  }
+
+  .imagem_sugestao {
+    @apply w-[50vw];
+  }
+
+  .conjunto_sugestoes > div {
+    @apply w-[50vw] mb-[3%];
+  }
+
+  .div_texto_login {
+    @apply text-[0.9rem];
+  }
+
+  .button_login {
+    @apply w-[16vw];
+  }
+
+  .button_cadastro {
+    @apply w-[20vw];
+  }
+
+  .texto_input_form > input {
+    @apply w-[50vw];
+  }
+}
+
+@media (max-width: 650px) {
+  .parte1_home > h1 {
+    @apply text-[1.8rem];
+  }
+
+  .parte1_home > p {
+    @apply text-[0.9rem];
+  }
+
+  .parte2_home > div {
+    @apply top-[3%];
+  }
+
+  .parte2_home > div > h1 {
+    @apply text-[1.3rem];
+  }
+
+  .parte2_home > div > p {
+    @apply text-[0.9rem];
+  }
+
+  .botoes_conta {
+    @apply w-[18vw];
+  }
+
+  .imagem_integrante {
+    @apply w-[35vw];
+  }
+
+  .icones_redes {
+    @apply w-[8vw];
+  }
+
+  .container_dados_consumo > div > h1 {
+    @apply text-[1.5rem];
+  }
+
+  .container_dados_consumo > div > p {
+    @apply text-[1rem] w-[90vw];
+  }
+}
+
+@media (max-width: 610px) {
+  .icones_dados_consumo {
+    @apply w-[14vw] h-[10vh];
+  }
+
+  .div_dados_consumo > div {
+    @apply ml-[5%] text-[1rem];
+  }
+
+  .botao_consumo {
+    @apply w-[20vw] mb-[5%];
+  }
+}
+
+@media (max-width: 580px) {
+  .parte1_home > p {
+    @apply pt-[10px];
+  }
+
+  .parte2_home > div > p {
+    @apply text-[0.8rem];
+  }
+
+  .container_login {
+    @apply w-[90vw];
+  }
+
+  .button_cadastro {
+    @apply w-[24vw];
+  }
+
+  .texto_input_form > input {
+    @apply w-[60vw];
+  }
+
+  .imagem_integrante {
+    @apply w-[40vw];
+  }
+
+  .icones_redes {
+    @apply w-[10vw];
+  }
+
+  .container_sobre > div {
+    @apply mt-[5%];
+  }
+
+  .container_sobre > div > div {
+    @apply ml-[3%];
+  }
+}
+
+@media (max-width: 530px) {
+  .parte2_home {
+    @apply pt-[50%];
+  }
+
+  .imagem_sugestao {
+    @apply w-[55vw];
+  }
+
+  .conjunto_sugestoes > div {
+    @apply w-[55vw] mb-[3%];
+  }
+
+  .container_conta > h1 {
+    @apply text-[1.8rem];
+  }
+
+  .container_conta > p {
+    @apply text-[1rem];
+  }
+
+  .container_conta > ul {
+    @apply text-[1.1rem];
+  }
+
+  .botoes_conta {
+    @apply text-[0.9rem];
+  }
+
+  .container_sobre > h1 {
+    @apply text-[1.6rem];
+  }
+
+  .imagem_integrante {
+    @apply w-[45vw];
+  }
+
+  .container_sobre > div {
+    @apply mt-[6%];
+  }
+
+  .container_sobre > div > div {
+    @apply text-[1.2rem];
+  }
+
+  .icones_dados_consumo {
+    @apply w-[16vw] h-[10vh];
+  }
+
+  .form_dados_consumo > .div_form_dados_consumo > input {
+    @apply w-[50vw];
+  }
+
+  .form_dados_consumo > .div_form_dados_consumo > select {
+    @apply w-[50vw];
+  }
+
+  .container_dados_consumo > div > h1 {
+    @apply text-[1.4rem];
+  }
+
+  .container_dados_consumo > div > p {
+    @apply text-[0.9rem] w-[90vw] text-justify;
+  }
+}
+
+@media (max-width: 490px) {
+  .parte1_home > h1 {
+    @apply text-[1.6rem];
+  }
+
+  .parte1_home > p {
+    @apply pt-[15px] text-[0.8rem];
+  }
+
+  .button_login {
+    @apply w-[27vw];
+  }
+
+  .button_cadastro {
+    @apply w-[27vw];
+  }
+}
+
+@media (max-width: 450px) {
+  header > h1 {
+    @apply text-[2rem];
+  }
+
+  .ul_links {
+    @apply text-[0.8rem];
+  }
+
+  .icone_conta {
+    @apply w-[7vw];
+  }
+
+  .texto_input_form > input {
+    @apply w-[65vw];
+  }
+
+  .container_sobre > h1 {
+    @apply text-[1.3rem];
+  }
+
+  .container_sobre > div > div {
+    @apply text-[1.1rem];
+  }
+}
+
+@media (max-width: 410px) {
+  .ul_links {
+    @apply gap-[10px];
+  }
+
+  .texto_input_form > input {
+    @apply w-[70vw];
+  }
+
+  .button_login {
+    @apply w-[30vw];
+  }
+
+  .botoes_conta {
+    @apply w-[20vw];
+  }
+
+  .container_dados_consumo > div > h1 {
+    @apply text-[1.2rem];
+  }
+
+  .container_dados_consumo > div > p {
+    @apply text-[0.8rem];
+  }
+}
+
+@media (max-width: 390px) {
+  .icone_conta {
+    @apply w-[9vw];
+  }
+
+  .parte1_home > h1 {
+    @apply text-[1.4rem];
+  }
+
+  .parte1_home > p {
+    @apply pt-[15px] text-[0.8rem];
+  }
+
+  .container_sugestoes > h1 {
+    @apply text-[1.2rem];
+  }
+
+  .container_sugestoes > p {
+    @apply text-[0.8rem] w-[90vw];
+  }
+
+  .imagem_sugestao {
+    @apply w-[60vw];
+  }
+
+  .conjunto_sugestoes > div {
+    @apply mt-[3%] w-[60vw] mb-[3%];
+  }
+
+  .container_login > h1 {
+    @apply text-[1.8rem];
+  }
+
+  .div_texto_login {
+    @apply text-[0.8rem];
+  }
+
+  .container_conta > h1 {
+    @apply text-[1.6rem];
+  }
+
+  .div_dados_consumo > div {
+    @apply ml-[3%];
+  }
+
+  .icone_lixo {
+    @apply w-[6vw];
+  }
+
+  .form_dados_consumo > .div_form_dados_consumo > input {
+    @apply w-[55vw];
+  }
+
+  .form_dados_consumo > .div_form_dados_consumo > select {
+    @apply w-[55vw];
+  }
+
+  .botao_consumo {
+    @apply w-[25vw];
+  }
+}
+
+  
