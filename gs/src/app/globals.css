@@ -27,6 +27,37 @@ body {
   @apply bg-[var(--cor-fundo)];
 }
 
+/* barra de rolagem */
+::-webkit-scrollbar {
+  width: 9px; /* Largura da barra de rolagem */
+}
+
+::-webkit-scrollbar-track {
+  background: var(--azul-escuro); /* Cor do fundo da barra de rolagem */
+  border-radius: 0px; /* Borda arredondada do fundo */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1d537a; /* Cor da parte que "desce" (a parte clicável da barra) */
+  border-radius: 10px; /* Borda arredondada da parte clicável */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #164a6e; /* Cor quando o usuário passa o mouse */
+}
+
+/* Animação de aparecer na página */
+.animated-content {
+  opacity: 0; /* Invisível inicialmente */
+  transform: translateY(20px); /* Deslocamento para baixo */
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.animated-content.visible {
+  opacity: 1; /* Visível */
+  transform: translateY(0); /* Posição original */
+}
+
 /* Cabeçalho */
 header {
     @apply flex items-center text-white pt-[10px] bg-[var(--cor-fundo)];
