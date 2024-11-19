@@ -441,3 +441,43 @@ tbody tr:nth-child(odd) {
 .icone_lixo:hover {
   @apply scale-[1.1];
 }
+
+/* Sobre */
+
+.container_sobre{
+  @apply bg-gradient-to-b from-[#081D2B] to-[#081D2B] via-[#0E343B] via-[#0E343B] to-[#124748] to-[#081D2B] pt-[7%] pl-[30px] pb-[10%];
+}
+
+.container_sobre > h1 {
+  @apply text-white text-[1.8rem];
+  font-family: var(--fonte-titulo);
+}
+
+.container_sobre > div {
+  @apply flex mt-[2%];
+}
+
+.imagem_integrante {
+  @apply w-[15vw] border-[2px] border-[#2ECC71] shadow-[4px_4px_10px_rgba(0,_0,_0,_0.2)];
+}
+
+.container_sobre > div > div {
+  @apply text-white text-[1.3rem] ml-[1%];
+  font-family: var(--fonte-principal);
+}
+
+.div_icones_redes {
+  @apply flex gap-[5px];
+}
+
+.icones_redes {
+  @apply w-[4vw];
+}
+
+.icones_redes {
+  @apply transition-transform duration-300 ease-in-out;
+}
+
+.icones_redes:hover {
+  @apply scale-[1.1];
+}
