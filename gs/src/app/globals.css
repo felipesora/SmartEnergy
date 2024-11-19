@@ -75,3 +75,45 @@ footer {
   footer > p {
     @apply text-center text-[0.8rem] py-[60px] ;
   }
+  /* Home */
+
+.parte1_home {
+    @apply text-white pt-[15%] pl-[30px] pb-[10%];
+    background: linear-gradient(to bottom, #081D2B 30%, #0E343B 80%, #124748 100%);
+  }
+  
+  .parte1_home > h1 {
+    @apply text-[2.5rem];
+    font-family: var(--fonte-titulo);
+  }
+  
+  .parte1_home > h1 > span {
+    @apply text-[var(--azul-claro)];
+  }
+  
+  .parte1_home > p {
+    @apply text-[1.3rem] pt-[40px] text-justify w-[90vw];
+    font-family: var(--fonte-principal);
+  }
+  
+  .parte2_home {
+    @apply pt-[20%] pl-[30px] pb-[20%] relative;
+    background-image: url('/imagens/energia-eolica2.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  
+  .parte2_home > div {
+    @apply absolute top-[10%];
+  }
+  
+  .parte2_home > div > h1 {
+    @apply text-[2.25rem] text-[var(--azul-escuro)];
+    font-family: var(--fonte-titulo); 
+  }
+  
+  .parte2_home > div > p {
+    @apply text-[1.2rem] pt-[20px] text-justify w-[90vw] font-bold text-black;
+    font-family: var(--fonte-principal);
+  }
