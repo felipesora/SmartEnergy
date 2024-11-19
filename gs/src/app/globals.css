@@ -65,3 +65,13 @@ header {
   .links:hover::after {
     @apply w-full left-0 bg-white;
   }
+  /* Rodapé */
+
+footer {
+    @apply bg-[var(--cor-fundo)] text-white;
+    font-family: var(--fonte-principal); 
+  }
+  
+  footer > p {
+    @apply text-center text-[0.8rem] py-[60px] ;
+  }
