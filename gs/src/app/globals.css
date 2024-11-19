@@ -47,3 +47,21 @@ header {
   .icone_conta:hover {
     @apply scale-110;
   }
+  /* Menu */
+
+.ul_links {
+    @apply flex list-none gap-[20px];
+  }
+  
+  .links {
+    @apply relative no-underline text-white transition-all duration-300 ease-in-out;
+  }
+  
+  .links::after {
+    content: '';
+    @apply absolute w-0 h-[2px] -bottom-1 right-0 bg-white transition-all duration-300 ease-in-out;
+  }
+  
+  .links:hover::after {
+    @apply w-full left-0 bg-white;
+  }
