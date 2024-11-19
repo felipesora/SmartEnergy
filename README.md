@@ -45,6 +45,8 @@ Baixe o projeto e rode a classe *Main* para poder usar a API em Front.
 5. **Acesse a aplicação:**:
     Após a inicialização, a aplicação estará disponível em http://localhost:3000.
 
+---
+
 ## 📄 Descrição das Páginas
 
 - Home (Página Inicial): Apresenta uma introdução ao conceito do projeto, destacando a importância do uso inteligente da energia. A página convida o usuário a se cadastrar e iniciar sua jornada em direção a um consumo mais eficiente.
@@ -59,19 +61,27 @@ Baixe o projeto e rode a classe *Main* para poder usar a API em Front.
 
 - Conta: Área do usuário onde é possível editar informações pessoais, excluir a conta ou fazer logout, garantindo controle sobre os dados.
 
+---
+
 ## 📋 Pré-Requisitos
 
 Antes de executar o projeto, certifique-se de ter o *Node.js* instalado na sua máquina. É recomendável também ter um editor de texto como *VS Code*.
 
+---
+
 ## 🔗 Link para o Protótipo no Figma
 
 [Protótipo](https://www.figma.com/design/qfNYpJsJYiuurcNFsI9qzU/Untitled?node-id=0-1&node-type=canvas&t=viyFV35rQ1rAcpI9-0)
+
+---
 
 ## 🎥 Vídeo Tutorial
 
 Confira o vídeo no YouTube para aprender a usar a plataforma *SmartEnergy*:
 
 [Vídeo](ainda nao tem)
+
+---
 
 ## 👤 Integrantes
 
