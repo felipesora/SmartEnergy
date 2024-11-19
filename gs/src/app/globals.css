@@ -26,110 +26,157 @@ margin: 0;
 body {
   @apply bg-[var(--cor-fundo)];
 }
+
 /* Cabeçalho */
 header {
     @apply flex items-center text-white pt-[10px] bg-[var(--cor-fundo)];
     font-family: var(--fonte-principal);
   }
   
-  header > h1 {
-    @apply text-[2rem] ml-[30px]; 
-  }
-  
-  header > div {
-    @apply flex items-center ml-[28vw]; 
-  }
-  
-  .icone_conta {
-    @apply transition-transform duration-300 ease-in-out w-[3vw] ml-[33vw];
-  }
-  
-  .icone_conta:hover {
-    @apply scale-110;
-  }
-  /* Menu */
+header > h1 {
+  @apply text-[2rem] ml-[30px]; 
+}
+
+header > div {
+  @apply flex items-center ml-[28vw]; 
+}
+
+.icone_conta {
+  @apply transition-transform duration-300 ease-in-out w-[3vw] ml-[33vw];
+}
+
+.icone_conta:hover {
+  @apply scale-110;
+}
+
+/* Menu */
 
 .ul_links {
     @apply flex list-none gap-[20px];
   }
   
-  .links {
-    @apply relative no-underline text-white transition-all duration-300 ease-in-out;
-  }
-  
-  .links::after {
-    content: '';
-    @apply absolute w-0 h-[2px] -bottom-1 right-0 bg-white transition-all duration-300 ease-in-out;
-  }
-  
-  .links:hover::after {
-    @apply w-full left-0 bg-white;
-  }
-  /* Rodapé */
+.links {
+  @apply relative no-underline text-white transition-all duration-300 ease-in-out;
+}
+
+.links::after {
+  content: '';
+  @apply absolute w-0 h-[2px] -bottom-1 right-0 bg-white transition-all duration-300 ease-in-out;
+}
+
+.links:hover::after {
+  @apply w-full left-0 bg-white;
+}
+
+/* Rodapé */
 
 footer {
     @apply bg-[var(--cor-fundo)] text-white;
     font-family: var(--fonte-principal); 
   }
   
-  footer > p {
-    @apply text-center text-[0.8rem] py-[60px] ;
-  }
-  /* Home */
+footer > p {
+  @apply text-center text-[0.8rem] py-[60px] ;
+}
+  
+/* Home */
 
 .parte1_home {
     @apply text-white pt-[15%] pl-[30px] pb-[10%];
     background: linear-gradient(to bottom, #081D2B 30%, #0E343B 80%, #124748 100%);
   }
   
-  .parte1_home > h1 {
-    @apply text-[2.5rem];
-    font-family: var(--fonte-titulo);
-  }
-  
-  .parte1_home > h1 > span {
-    @apply text-[var(--azul-claro)];
-  }
-  
-  .parte1_home > p {
-    @apply text-[1.3rem] pt-[40px] text-justify w-[90vw];
-    font-family: var(--fonte-principal);
-  }
-  
-  .parte2_home {
-    @apply pt-[20%] pl-[30px] pb-[20%] relative;
-    background-image: url('/imagens/energia-eolica2.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-  }
-  
-  .parte2_home > div {
-    @apply absolute top-[10%];
-  }
-  
-  .parte2_home > div > h1 {
-    @apply text-[2.25rem] text-[var(--azul-escuro)];
-    font-family: var(--fonte-titulo); 
-  }
-  
-  .parte2_home > div > p {
-    @apply text-[1.2rem] pt-[20px] text-justify w-[90vw] font-bold text-black;
-    font-family: var(--fonte-principal);
-  }
-  
-  /*Página de Erro*/
+.parte1_home > h1 {
+  @apply text-[2.5rem];
+  font-family: var(--fonte-titulo);
+}
+
+.parte1_home > h1 > span {
+  @apply text-[var(--azul-claro)];
+}
+
+.parte1_home > p {
+  @apply text-[1.3rem] pt-[40px] text-justify w-[90vw];
+  font-family: var(--fonte-principal);
+}
+
+.parte2_home {
+  @apply pt-[20%] pl-[30px] pb-[20%] relative;
+  background-image: url('/imagens/energia-eolica2.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.parte2_home > div {
+  @apply absolute top-[10%];
+}
+
+.parte2_home > div > h1 {
+  @apply text-[2.25rem] text-[var(--azul-escuro)];
+  font-family: var(--fonte-titulo); 
+}
+
+.parte2_home > div > p {
+  @apply text-[1.2rem] pt-[20px] text-justify w-[90vw] font-bold text-black;
+  font-family: var(--fonte-principal);
+}
+
+/*Página de Erro*/
 
 .container_erro {
-  @apply my-[10%] flex flex-col items-center justify-center gap-[10px];
+@apply my-[10%] flex flex-col items-center justify-center gap-[10px];
 }
 
 .container_erro > h1 {
-  @apply text-white text-[1.5rem];
-  font-family: var(--fonte-principal);
+@apply text-white text-[1.5rem];
+font-family: var(--fonte-principal);
 }
 
 .container_erro > h2 {
-  @apply text-white text-[1.5rem];
-  font-family: var(--fonte-principal);
+@apply text-white text-[1.5rem];
+font-family: var(--fonte-principal);
+}
+
+/* Sugestões */
+
+.container_sugestoes {
+  @apply bg-gradient-to-b from-[#081D2B] to-[#081D2B] via-[#0E343B] via-[#0E343B] to-[#124748] to-[#081D2B] pt-[7%] pl-[30px] pb-[10%];
+}
+
+.container_sugestoes > h1 {
+  @apply text-white text-[1.8rem];
+  font-family: var(--fonte-titulo);
+}
+
+.container_sugestoes > p {
+  @apply text-white pt-[1%] text-[1rem] w-[80vw];
+  font-family: var(--fonte-principal); 
+}
+
+.conjunto_sugestoes {
+  @apply flex gap-[10%] pt-[3%];
+}
+
+.conjunto_sugestoes2 {
+  @apply pb-[5%];
+}
+
+.conjunto_sugestoes > div {
+  @apply bg-white rounded-[10px] shadow-md flex flex-col items-center text-center;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); 
+}
+
+.imagem_sugestao {
+  @apply w-[25vw] rounded-[10px];
+}
+
+.conjunto_sugestoes > div > p {
+  @apply text-[0.9rem] w-[22vw] py-[2%];
+  font-family: var(--fonte-principal); 
+}
+
+.mensagem_carregando {
+  @apply bg-[var(--cor-fundo)] text-white;
+  font-family: var(--fonte-principal); 
 }
