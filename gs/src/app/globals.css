@@ -211,3 +211,70 @@ font-family: var(--fonte-principal);
   @apply bg-[var(--cor-fundo)] text-white;
   font-family: var(--fonte-principal); 
 }
+
+/* Login */
+
+.main_login {
+  @apply bg-gradient-to-b from-[#081D2B] to-[#081D2B] via-[#0E343B] via-[#0E343B] to-[#124748] to-[#081D2B] pt-[7%] pb-[10%];
+}
+
+.container_login {
+  @apply bg-transparent border-2 border-[#1ABC9C] mx-auto w-[60vw];
+}
+
+.container_login > h1 {
+  @apply text-[2rem] text-[#1ABC9C] text-center font-bold;
+  font-family: var(--fonte-principal); 
+}
+
+.div_texto_login {
+  @apply text-[#1ABC9C] text-[1.1rem] ml-[1%];
+  font-family: var(--fonte-principal);
+}
+
+.link_form {
+  @apply relative no-underline text-[var(--azul-claro)] transition-all duration-300 ease-in-out;
+}
+
+.link_form::after {
+  content: '';
+  @apply absolute w-0 h-[2px] -bottom-1 right-0 bg-[var(--azul-claro)] transition-all duration-300 ease-in-out;
+}
+
+.link_form:hover::after {
+  @apply w-full left-0 bg-[var(--azul-claro)];
+}
+
+.texto_input_form {
+  @apply flex flex-col ml-[1%] mt-[2%];
+  font-family: var(--fonte-principal);
+}
+
+.texto_input_form > label {
+  @apply text-[#1ABC9C] text-[1.2rem] font-bold;
+}
+
+.texto_input_form > input {
+  @apply w-[30vw] pl-[0.5%] border-2 border-[#1ABC9C] rounded-[5px];
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.button_login {
+  @apply text-[#1ABC9C] mt-[2%] mb-[2%] ml-[1%] bg-transparent border-2 border-[#1ABC9C] p-[5px] w-[7vw] relative overflow-hidden z-[1] transition-colors duration-300;
+  font-family: var(--fonte-principal); 
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); 
+}
+
+.button_login::before {
+  content: '';
+  @apply absolute top-full left-0 w-full h-full bg-[#1ABC9C] transition-all duration-300 ease-in-out;
+  z-index: -1;
+}
+
+.button_login:hover {
+  @apply text-white;
+}
+
+.button_login:hover::before {
+  @apply top-0;
+}
