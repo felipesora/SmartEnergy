@@ -335,3 +335,109 @@ font-family: var(--fonte-principal);
 .botoes_conta:hover::before {
   @apply top-0;
 }
+
+/* Dados Consumo */
+
+.container_dados_consumo {
+  @apply bg-gradient-to-b from-[#081D2B] to-[#081D2B] via-[#0E343B] via-[#0E343B] to-[#124748] to-[#081D2B] pt-[7%] pl-[30px] pb-[10%];
+}
+
+.container_dados_consumo > div > h1 {
+  @apply text-white text-[1.8rem];
+  font-family: var(--fonte-titulo);
+}
+
+.container_dados_consumo > div > p {
+  @apply text-white pt-[1%] text-[1rem] w-[80vw];
+  font-family: var(--fonte-principal);
+}
+
+.form_dados_consumo {
+  @apply mt-[3%];
+}
+
+.form_dados_consumo > .div_form_dados_consumo {
+  @apply flex flex-col mt-[2%];
+  font-family: var(--fonte-principal);
+}
+
+.form_dados_consumo > .div_form_dados_consumo > label {
+  @apply text-[#1ABC9C] text-[1.4rem] font-bold;
+}
+
+.form_dados_consumo > .div_form_dados_consumo > input,
+.form_dados_consumo > .div_form_dados_consumo > select {
+  @apply w-[15vw] pl-[0.5%] border-[2px] border-[#1ABC9C] rounded-[5px] text-[1.2rem] shadow-[4px_4px_10px_rgba(0,_0,_0,_0.2)];
+}
+
+.botao_consumo {
+  @apply text-[#1ABC9C] my-[2%] bg-transparent border-2 border-[#1ABC9C] p-[5px] w-[7vw] relative overflow-hidden z-[1] transition-colors duration-300 ease-in-out shadow-[4px_4px_10px_rgba(0,_0,_0,_0.2)];
+  font-family: var(--fonte-principal);
+}
+
+.botao_consumo::before {
+  @apply content-[''] absolute top-[100%] left-0 w-full h-full bg-[#1ABC9C] transition-all duration-300 ease-in-out z-[-1];
+}
+
+.botao_consumo:hover {
+  @apply text-white;
+}
+
+.botao_consumo:hover::before {
+  @apply top-0;
+}
+
+table {
+  @apply w-[70vw] border-collapse bg-transparent shadow-[4px_4px_10px_rgba(0,_0,_0,_0.2)];
+  font-family: var(--fonte-principal);
+}
+
+th, td {
+  @apply p-[12px] text-left border-[1px] border-[#1ABC9C] bg-transparent;
+}
+
+th {
+  @apply text-center text-[#1ABC9C];
+}
+
+td {
+  @apply text-white;
+}
+
+tbody tr:nth-child(even),
+tbody tr:nth-child(odd) {
+  @apply bg-transparent;
+}
+
+.div_dados_consumo {
+  @apply flex mt-[2%];
+}
+
+.div_dados_consumo > div {
+  @apply ml-[1%] text-white text-[1.1rem];
+  font-family: var(--fonte-principal);
+}
+
+.div_dados_consumo > div > div {
+  @apply flex items-center gap-[10px];
+}
+
+.texto_dados_consumo {
+  @apply mt-[1%];
+}
+
+.icones_dados_consumo {
+  @apply w-[6vw] h-[12vh];
+}
+
+.icone_lixo {
+  @apply w-[2vw];
+}
+
+.icone_lixo {
+  @apply transition-transform duration-300 ease-in-out;
+}
+
+.icone_lixo:hover {
+  @apply scale-[1.1];
+}
