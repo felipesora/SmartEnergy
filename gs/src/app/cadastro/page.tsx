@@ -1,5 +1,15 @@
 "use client";
 
+interface ErroRequisicao {
+    response?: {
+        data: {
+            message: string;
+        };
+    };
+    message?: string;
+}
+
+
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
@@ -40,16 +50,19 @@ export default function Cadastro() {
                 router.push("/login");
             }, 2000);
     
-        } catch (error: any) {
+        } catch (error: unknown) { // Especificamos 'unknown' para garantir que validamos o tipo do erro
             console.error("Erro ao cadastrar:", error);
     
             setCadastroSuccess(false); // Garante que a mensagem de sucesso não apareça
             
+            // Verifique se o erro é do tipo `ErroRequisicao`
+            const erroTipado = error as ErroRequisicao;
+    
             // Loga o erro para entender a estrutura
-            console.log(error);
+            console.log(erroTipado);
     
             // Verifica a estrutura do erro e compara com a mensagem de "Email já cadastrado"
-            const errorMessage = error?.response?.data?.message || error?.message || "Erro desconhecido!";
+            const errorMessage = erroTipado.response?.data?.message || erroTipado.message || "Erro desconhecido!";
     
             if (errorMessage.includes("Email já cadastrado")) {
                 setCadastroError("Este email já está cadastrado.");
