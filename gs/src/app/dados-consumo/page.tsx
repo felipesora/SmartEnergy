@@ -13,9 +13,9 @@ import type { DadosConsumo } from "@/services/dados-consumo/api";
 
 export default function DadosConsumo() {
   const [dadosConsumoUsuario, setDadosUsuario] = useState<DadosConsumo | DadosConsumo[] | null>(null);
-  const [ano, setAno] = useState<string>("");  // Inicializando com string vazia
+  const [ano, setAno] = useState<string>("");  
   const [mes, setMes] = useState<string>(""); 
-  const [kwh, setKwh] = useState<string>(""); // Inicializando com string vazia
+  const [kwh, setKwh] = useState<string>("");
   const router = useRouter();
   
   useEffect(() => {
@@ -42,7 +42,7 @@ export default function DadosConsumo() {
         setDadosUsuario(dadosConsumo);
       } catch (error) {
         console.error("Erro ao carregar os dados de consumo do usuário:", error);
-        // Não precisa mais exibir o alerta se não houver dados
+        
       }
     }
   
@@ -118,7 +118,8 @@ export default function DadosConsumo() {
     <main className="container_dados_consumo">
       <div>
         <h1>Seu Consumo de Energia, Analisado de Forma Simples</h1>
-        <p>Acompanhe de perto seu consumo de energia e descubra maneiras de economizar. Insira seus dados mensais e visualize sua média diária para entender melhor como usar energia de forma mais eficiente.</p>
+        <p>Acompanhe de perto o seu consumo de energia e entenda como ele impacta o meio ambiente. Ao inserir seus dados mensais de consumo, você poderá visualizar sua média diária e entender melhor como pode reduzir seu impacto ambiental.</p>
+        <p>Além disso, com base nos dados fornecidos, calculamos a quantidade de CO2 emitido devido ao seu consumo de energia, utilizando as fórmulas e métodos da <strong>SOS Mata Atlântica</strong> e <strong>Carbon Lifecycle</strong>. Esses cálculos permitem que você tenha uma visão clara de como sua escolha de consumo de energia contribui para a emissão de gases de efeito estufa, ajudando a identificar formas de otimizar o uso de energia de maneira mais sustentável e reduzir sua pegada de carbono.</p>
         <form onSubmit={handleCadastroDadosConsumo} className="form_dados_consumo">
           <div className="div_form_dados_consumo">
             <label htmlFor="ano" className="texto_form">Ano:</label>
@@ -197,6 +198,7 @@ export default function DadosConsumo() {
             {/* Verificando se dadosConsumoUsuario não é nulo e é um array */}
             {dadosConsumoUsuario && Array.isArray(dadosConsumoUsuario) && dadosConsumoUsuario.map((dado, index) => {
                 const mediaDiaria = dado.kwhConsumo / 30;  // Calculando a média diária
+                const mediaCO2 = dado.kwhConsumo * 0.0125; // Calculando a média de poluição de CO2
                 
                 let categoriaConsumo = '';
                 let corCategoria = '';
@@ -222,11 +224,15 @@ export default function DadosConsumo() {
                     {/* Exibindo o ícone correspondente com a tag Image do Next.js */}
                     {icone && <Image src={icone} alt={categoriaConsumo} className="icones_dados_consumo"/>}
                     <div>
-                        <p className="texto_dados_consumo">Ano: {dado.anoConsumo}</p>
-                        <p className="texto_dados_consumo">Mês: {dado.mesConsumo}</p>
-                        <p className="texto_dados_consumo">Média diária: {mediaDiaria.toFixed(2)} kWh</p>  {/* Exibindo a média diária */}
                         <div>
-                            <p>Categoria: <span style={{ color: corCategoria }}>{categoriaConsumo}</span></p> {/* Exibindo a categoria com cor */}
+                          <p className="texto_dados_consumo">Ano: {dado.anoConsumo}</p>
+                          <p className="texto_dados_consumo">Mês: {dado.mesConsumo}</p>
+                          <p className="texto_dados_consumo">Média diária: {mediaDiaria.toFixed(2)} kWh</p>  {/* Exibindo a média diária */}
+                          <p className="texto_dados_consumo">Emissão Total de CO2: {mediaCO2.toFixed(2)} Kg CO2e</p> {/* Exibindo a média de emissão total de CO2 */}
+                          <p>Categoria: <span style={{ color: corCategoria }}>{categoriaConsumo}</span></p> {/* Exibindo a categoria com cor */}
+                        </div>
+                        <div className="div_icone_lixo">
+                             
                             <button onClick={() => handleExcluirDadosConsumo(dado.idConsumo)}><Image src={iconeLixeira} alt="icone de uma lixeira" className="icone_lixo" /></button>
                         </div>
                     </div>
