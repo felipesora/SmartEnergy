@@ -9,7 +9,22 @@ export default function HomePage() {
     elements.forEach((element) => {
       element.classList.add('visible');
     });
+
+    // Carrega o script do TypeBot
+    const typebotInitScript = document.createElement("script");
+    typebotInitScript.type = "module";
+    typebotInitScript.innerHTML = `import Typebot from 'https://cdn.jsdelivr.net/npm/@typebot.io/js@0.3/dist/web.js'
+    
+    Typebot.initBubble({
+      typebot: "my-typebot-1gxcx0q",
+      theme: { button: { backgroundColor: "#0E343B" } },
+    });
+    `;
+    document.body.append(typebotInitScript);
+
   }, []);
+
+  
 
   return (
     <main>
