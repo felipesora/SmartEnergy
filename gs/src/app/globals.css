@@ -216,6 +216,17 @@ footer > p {
   font-family: var(--fonte-principal);
 }
 
+.sucesso_login{
+  @apply text-[#1ABC9C] text-[1.2rem] ml-[1%] mt-[2%];
+  font-family: var(--fonte-principal);
+}
+
+.erro_login{
+  @apply text-[#ff2020] text-[1.2rem] ml-[1%] mt-[2%];
+  font-family: var(--fonte-principal);
+}
+
+
 .link_form {
   @apply relative no-underline text-[var(--azul-claro)] transition-all duration-300 ease-in-out;
 }
@@ -230,7 +241,7 @@ footer > p {
 }
 
 .texto_input_form {
-  @apply flex flex-col ml-[1%] mt-[2%];
+  @apply flex flex-col ml-[1%] mt-[1%];
   font-family: var(--fonte-principal);
 }
 
@@ -280,8 +291,18 @@ footer > p {
   font-family: var(--fonte-principal);
 }
 
-.container_conta > p {
+.texto_conta {
   @apply text-[#1ABC9C] text-[1.1rem] ml-[1%];
+  font-family: var(--fonte-principal);
+}
+
+.erro_editar_conta{
+  @apply text-[#ff2020] text-[1.2rem] ml-[1%] mt-[2%];
+  font-family: var(--fonte-principal);
+}
+
+.sucesso_editar_conta{
+  @apply text-[#1ABC9C] text-[1.2rem] ml-[1%] mt-[2%];
   font-family: var(--fonte-principal);
 }
 
@@ -319,6 +340,8 @@ footer > p {
 .botoes_conta:hover::before {
   @apply top-0;
 }
+
+
 
 /* Dados Consumo */
 

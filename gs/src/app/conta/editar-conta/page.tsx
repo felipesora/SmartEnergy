@@ -7,6 +7,8 @@ import { atualizarUsuarioPorId, Usuario, obterUsuarioPorId } from  "@/services/c
 export default function EditarConta() {
     const [usuario, setUsuario] = useState<Usuario | null>(null);
     const [loading, setLoading] = useState(true); 
+    const [atualizarSuccess, setAtualizarSuccess] = useState(false);
+    const [atualizarError, setAtualizarError] = useState(""); 
     const router = useRouter();
 
     useEffect(() => {
@@ -39,11 +41,17 @@ export default function EditarConta() {
         if (usuario) {
             try {
                 await atualizarUsuarioPorId(usuario.idUsuario, usuario);
-                alert("Dados atualizados com sucesso!");
-                router.push("/conta")
+                setAtualizarSuccess(true);
+                setAtualizarError("");
+                // alert("Dados atualizados com sucesso!");
+
+                setTimeout(() => {
+                    router.push("/conta"); // Redireciona para a página inicial após 2 segundos
+                  }, 2000); // 2 segundos de espera
             } catch (error) {
                 console.error("Erro ao atualizar dados do usuário:", error);
-                alert("Erro ao atualizar dados do usuário. Tente novamente.");
+                setAtualizarError("Erro ao atualizar dados do usuário"); // Exibe a mensagem de erro
+                setAtualizarSuccess(false);  // Limpa a mensagem de sucesso
             }
         } else {
             alert("Nenhum dado de usuário encontrado para atualização.");
@@ -63,7 +71,14 @@ export default function EditarConta() {
     <main className="main_login">
         <div className="container_conta">
             <h1>Atualização de Conta</h1>
-            <p>Atualize os campos abaixo:</p>
+            <p className="texto_conta">Atualize os campos abaixo:</p>
+            {atualizarSuccess && (
+                <p className="sucesso_editar_conta">Dados atualizado com sucesso!</p>  // Mensagem de sucesso
+            )}
+
+            {atualizarError && (
+                <p className="erro_editar_conta">{atualizarError}</p>  // Mensagem de erro
+            )}
             <form onSubmit={handleSubmit}>
                     <div className="texto_input_form">
                         <label htmlFor="idNome"><strong>Nome:</strong></label>

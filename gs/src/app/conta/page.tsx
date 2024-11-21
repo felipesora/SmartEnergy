@@ -78,7 +78,7 @@ export default function Conta() {
     <main className="main_login">
         <div className="container_conta">
             <h1>Dados da Conta</h1>
-            <p>Abaixo estão seus dados cadastrados no sistema:</p>
+            <p className="texto_conta">Abaixo estão seus dados cadastrados no sistema:</p>
             <ul>
                 <li><strong>Nome:</strong> <span>{usuario.nomeUsuario}</span></li>
                 <li><strong>Email:</strong> <span>{usuario.emailUsuario}</span></li>
