@@ -94,6 +94,12 @@ Confira o vídeo no YouTube para aprender a usar a plataforma *SmartEnergy*:
 
 ---
 
+## 🔗 Link para o Repositório de Front-End
+
+[Repositório](https://github.com/felipesora/SmartEnergy)
+
+---
+
 ## 👤 Integrantes
 
 - Felipe Pizzinato Bigatto Garcia | RM: 555141 | 1TDSPH
